@@ -134,7 +134,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>KKBase.lib;KKLineScanner.lib;KKMachineLearning.lib;CounterBase.lib;CounterUnManaged.lib;zlib-1.2.11.lib;libfftw3-3.lib;libfftw3f-3.lib;Advapi32.lib;USER32.LIB;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(PUREGEV_ROOT)Libraries;$(SolutionDir)$(Platform)\$(Configuration)\;$(OutsidePackages)\fftw-3.3.5-dll64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(PUREGEV_ROOT)\Libraries;$(SolutionDir)$(Platform)\$(Configuration)\;$(OutsidePackages)\fftw-3.3.5-dll64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AssemblyDebug>true</AssemblyDebug>
     </Link>

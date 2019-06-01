@@ -953,7 +953,7 @@ void  CameraAcquisitionPleora::SetAnalogGain  (float requestedAnalogGain)
 
 
 
-void  CameraAcquisitionPleora::SetDigitalGain  (kkint32 requestedDigitalGain)
+void  CameraAcquisitionPleora::SetDigitalGain (kkint32 requestedDigitalGain)
 {
   if  (lDigitalGainRaw)
   {

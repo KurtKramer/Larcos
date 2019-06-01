@@ -114,7 +114,7 @@
     </CustomBuildStep>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(KSquareLibraries)\KKBase\;$(KSquareLibraries)\KKLineScanner;$(KSquareLibraries)\KKMachineLearning;$(SolutionDir)\CounterLibraries\CounterBase;$(PUREGEV_ROOT)Includes;$(PUREGEV_ROOT)eBUS SDK\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(KSquareLibraries)\KKBase\;$(KSquareLibraries)\KKLineScanner;$(KSquareLibraries)\KKMachineLearning;$(SolutionDir)\CounterLibraries\CounterBase;$(PUREGEV_ROOT)\Includes;$(PUREGEV_ROOT)eBUS SDK\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
