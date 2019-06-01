@@ -45,7 +45,7 @@ KKStr  CounterVariables::CounterHomeDir ()
     return  counterHomeDir;
 
   // We will first try and get directory from the CounterHomeDir environment variable.
-  KKStrPtr homeDir = osGetEnvVariable ("LarcosHomeDir");
+  KKStrPtr homeDir = osGetEnvVariable ("ZoisHomeDir");
   if  (homeDir != NULL)
   {
     counterHomeDir = *homeDir;
@@ -56,8 +56,8 @@ KKStr  CounterVariables::CounterHomeDir ()
   if  (counterHomeDir.Empty ())
   {
     #if  defined(KKOS_WINDOWS)
-       counterHomeDir = "C:\\Larcos";
-       cout << endl << "counterHomeDir" << "\t" << counterHomeDir << endl << endl;
+       counterHomeDir = "C:\\zois";
+       cout << endl << "ZoisHomeDir" << "\t" << counterHomeDir << endl << endl;
     #else
        counterHomeDir = "/Larcos";
     #endif

@@ -81,7 +81,8 @@ CounterTrainingModelPtr  CounterTrainingModelManaged::UnManaged ()
 
 
 
-CounterTrainingModelListManaged::CounterTrainingModelListManaged ()
+CounterTrainingModelListManaged::CounterTrainingModelListManaged () :
+  counterTrainingModels (new CounterTrainingModelList (true))
 {
 }
 

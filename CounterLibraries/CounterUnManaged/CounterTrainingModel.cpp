@@ -99,27 +99,27 @@ CounterTrainingModelList::~CounterTrainingModelList ()
 
 CounterTrainingModelListPtr  CounterTrainingModelList::BuildFromTrainigModelDir ()
 {
-  KKStr  trainModelDir = KKMLVariables::TrainingModelsDir ();
-  KKStrListPtr  modelFileNames = osGetListOfFiles (osAddSlash (trainModelDir) + "*.cfg");
-  if  (modelFileNames == NULL)
-    return NULL;
-
   CounterTrainingModelListPtr  modelList = new CounterTrainingModelList (true);
 
-  KKStrList::const_iterator idx;
-  for  (idx = modelFileNames->begin ();  idx != modelFileNames->end ();  ++idx)
+  KKStr  trainModelDir = KKMLVariables::TrainingModelsDir ();
+  KKStrListPtr  modelFileNames = osGetListOfFiles (osAddSlash (trainModelDir) + "*.cfg");
+  if (modelFileNames != NULL)
   {
-    KKStrPtr name = *idx;
+    KKStrList::const_iterator idx;
+    for (idx = modelFileNames->begin (); idx != modelFileNames->end (); ++idx)
+    {
+      KKStrPtr name = *idx;
 
-    KKStr  fileRootName = osGetRootName (*name);
-    if  (fileRootName.InstancesOfChar ('_') != 2)
-      continue;
+      KKStr  fileRootName = osGetRootName (*name);
+      if (fileRootName.InstancesOfChar ('_') != 2)
+        continue;
 
-    KKStr  subject      = fileRootName.ExtractToken2 ("_");
-    KKStr  size         = fileRootName.ExtractToken2 ("_");
-    KKStr  waterQuality = fileRootName.ExtractToken2 ("_");
+      KKStr  subject = fileRootName.ExtractToken2 ("_");
+      KKStr  size = fileRootName.ExtractToken2 ("_");
+      KKStr  waterQuality = fileRootName.ExtractToken2 ("_");
 
-    modelList->PushOnBack (new CounterTrainingModel (subject, size, waterQuality, *name));
+      modelList->PushOnBack (new CounterTrainingModel (subject, size, waterQuality, *name));
+    }
   }
 
   delete  modelFileNames;
