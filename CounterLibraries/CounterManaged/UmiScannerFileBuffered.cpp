@@ -717,7 +717,7 @@ UmiRaster^  UmiScannerFileBuffered::GetRasterForParticle (UmiParticleEntry^ pe)
     scannerCol = peScannerCol;
     col = 0;
     particleCol = 1;
-    while (col < particleWidth)
+    while (col < particleWidth  &&  scannerCol < rowData->Length)
     {
       particleRowData[particleCol] = rowData[scannerCol];
       ++col;
